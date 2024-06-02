@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ページは3つ作成
+・/todos (TodoListコンポーネント)
+・/todos/new (AddTodoコンポーネント)
+・/todos/:id/edit (EditTodoコンポーネント)
 
-Things you may want to cover:
+画面遷移を行わない仕組み
+javascript/packs/index.jsのAppコンポーネントを、
+views/site/index.html.erbにマウントし、
+Appコンポーネント内で、URLに応じて表示するコンポーネントを切り替えできるよう設定
 
-* Ruby version
+TodoListコンポーネントにて
+・todos#indexにアクセスし、データを取得
+・todos#updateにアクセスし、データの更新(完了チェック)
+・todo#destroy_allにアクセスし、データの一括削除
 
-* System dependencies
+AddTodoコンポーネントにて
+・todos#createにアクセスし、データを作成
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+EditTodoコンポーネントにて
+・todos#showにアクセスし、データを取得
+・todos#updateにアクセスし、データの更新(名前の更新)
+・todo#destroyにアクセスし、データの削除
